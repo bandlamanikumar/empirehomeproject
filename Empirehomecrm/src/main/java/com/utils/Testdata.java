@@ -12,24 +12,28 @@ import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import com.base.Basetest;
 
 public class Testdata extends Basetest {
-	public static String[][]customerdata(String sheetname)throws Throwable{ 
-		File file=new File("C:\\Users\\91810\\git\\EmpireHome_Crm\\Empirehomecrm\\src\\main\\java\\com\\testdata\\loginfunctionality testcases.xlsx");
-		FileInputStream steram=new FileInputStream(file);
-		XSSFWorkbook workbook=new XSSFWorkbook(Stream<T>);
-		XSSFSheet sheet=workbook.getSheet(sheetname);
-		intt rows=sheet.getPhysicalNumberOfRows()[Rows();
-		int cells=sheet.getrow(1).getlastcellnum();
-		String[][]data=new String[rows_1][cells];
-		for(int i=0;i<rows-1;i++) {
-			for(int j=0;j<cells;j++) {
-				DataFormatter df =new dataformatter();
-				data[i][j]=df.formatCellValue(sheet.getRow(i+1).getCell(j));
+
+	public static String[][] Customerdata(String sheetname) throws Throwable {
+
+		File file = new File("./src/main/java/com/testdata/ADDTOPRODUCT.xlsx");
+		FileInputStream stream = new FileInputStream(file);
+		XSSFWorkbook workbook = new XSSFWorkbook(stream);
+		XSSFSheet sheet = workbook.getSheet(sheetname);
+		int rows = sheet.getPhysicalNumberOfRows();
+		int cells = sheet.getRow(1).getLastCellNum();
+
+		String[][] data = new String[rows - 1][cells];
+
+		for (int i = 0; i < rows - 1; i++) {
+			for (int j = 0; j < cells; j++) {
+
+				DataFormatter df = new DataFormatter();
+
+				data[i][j] = df.formatCellValue(sheet.getRow(i + 1).getCell(j));
+
 			}
-			
 		}
 		return data;
-		
-				
-	}
 
-}
+	}
+	}
