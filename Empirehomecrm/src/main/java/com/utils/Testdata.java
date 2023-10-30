@@ -8,6 +8,9 @@ import java.util.stream.Stream;
 import org.apache.poi.ss.usermodel.DataFormatter;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
 
 import com.base.Basetest;
 
@@ -35,5 +38,10 @@ public class Testdata extends Basetest {
 		}
 		return data;
 
+	}
+	
+	public static void dropdowns(WebElement value,int text) {
+		Select sl=new Select(value);
+		sl.deselectAll();
 	}
 	}
