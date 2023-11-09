@@ -2,26 +2,29 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-10-30T10:59:33 IST" name="Default suite" finished-at="2023-10-30T10:59:52 IST" duration-ms="19255">
+  <suite started-at="2023-11-09T12:10:30 IST" name="Default suite" finished-at="2023-11-09T12:10:39 IST" duration-ms="9040">
     <groups>
     </groups>
-    <test started-at="2023-10-30T10:59:33 IST" name="Default test" finished-at="2023-10-30T10:59:52 IST" duration-ms="19255">
-      <class name="com.testcases.stockmove_functionaliy_Test">
-        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.stockmove_functionaliy_Test@368247b9]" started-at="2023-10-30T10:59:33 IST" name="setup" finished-at="2023-10-30T10:59:39 IST" duration-ms="6553" status="PASS">
+    <test started-at="2023-11-09T12:10:30 IST" name="Default test" finished-at="2023-11-09T12:10:39 IST" duration-ms="9040">
+      <class name="com.testcases.usertypefunctionalitytest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:com.testcases.usertypefunctionalitytest@1a942c18]" started-at="2023-11-09T12:10:30 IST" name="setup" finished-at="2023-11-09T12:10:39 IST" duration-ms="8983" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="stockmove_verify()[pri:0, instance:com.testcases.stockmove_functionaliy_Test@368247b9]" started-at="2023-10-30T10:59:39 IST" name="stockmove_verify" finished-at="2023-10-30T10:59:52 IST" duration-ms="12650" status="FAIL">
-          <exception class="java.lang.UnsupportedOperationException">
+        <test-method signature="loginvalidation()[pri:0, instance:com.testcases.usertypefunctionalitytest@1a942c18]" started-at="2023-11-09T12:10:39 IST" name="loginvalidation" finished-at="2023-11-09T12:10:39 IST" duration-ms="14" status="FAIL">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[You may only deselect all options of a multi-select]]>
+              <![CDATA[expected [http://empirehome.myprojectsonline.co.in/Inventory/All] but found [http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.UnsupportedOperationException: You may only deselect all options of a multi-select
-at org.openqa.selenium.support.ui.Select.deselectAll(Select.java:210)
-at com.utils.Testdata.dropdowns(Testdata.java:45)
-at com.pageobjects.StockmoveFunctionality.verifyaddinventrypage(StockmoveFunctionality.java:72)
-at com.testcases.stockmove_functionaliy_Test.stockmove_verify(stockmove_functionaliy_Test.java:34)
+              <![CDATA[java.lang.AssertionError: expected [http://empirehome.myprojectsonline.co.in/Inventory/All] but found [http://empirehome.myprojectsonline.co.in/EmpireHome/Dashboard]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.testcases.usertypefunctionalitytest.loginvalidation(usertypefunctionalitytest.java:38)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -52,11 +55,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.UnsupportedOperationException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- stockmove_verify -->
-      </class> <!-- com.testcases.stockmove_functionaliy_Test -->
+        </test-method> <!-- loginvalidation -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:com.testcases.usertypefunctionalitytest@1a942c18]" started-at="2023-11-09T12:10:39 IST" name="teardown" finished-at="2023-11-09T12:10:39 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.testcases.usertypefunctionalitytest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
