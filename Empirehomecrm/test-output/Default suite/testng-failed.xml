@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.employeeregistrationfunctionalitylest">
+      <class name="com.testcases.Shiftfunctionaliytest">
         <methods>
-          <include name="EmployeeRegistrationValidation"/>
+          <include name="teardown"/>
+          <include name="addnewshiftvalidation"/>
+          <include name="deleteshiftvalidation"/>
+          <include name="editshiftvalidation"/>
           <include name="setup"/>
         </methods>
-      </class> <!-- com.testcases.employeeregistrationfunctionalitylest -->
+      </class> <!-- com.testcases.Shiftfunctionaliytest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
