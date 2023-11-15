@@ -1,5 +1,6 @@
 package com.pageobjects;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,45 +11,75 @@ import net.bytebuddy.asm.Advice.This;
 
 public class customerfunctionality extends Basetest  {
 	
-	@FindBy(xpath = "//span[normalize-space()='Customers']")
-	WebElement customer; 
-	@FindBy(xpath = "//input[@placeholder='Enter Customer Name']")
-	WebElement name; 
-	@FindBy(xpath = "//input[@placeholder='Enter Mobile Number']")
-	WebElement mobilenumber; 
-	@FindBy(xpath = "//input[@placeholder='Enter Email Id']")
-	WebElement email; 
-	@FindBy(xpath = "//input[@placeholder='Enter Whatsapp Number']")
-	WebElement whatsapp;  
-	@FindBy(xpath = "//button[normalize-space()='Save']")
-	WebElement save; 
-	@FindBy(xpath = "//tr[@class='odd']//i[@class='fa fa-pencil']")
-	WebElement eddit;
-	@FindBy(xpath = "//input[@class='form-control form-control-sm']")
+	@FindBy (xpath = "//span[@class='pe-7s-keypad']")
+	WebElement element;
+	@FindBy (xpath = "//span[normalize-space()='Customers']")
+	WebElement customers;
+	@FindBy (xpath = "//a[normalize-space()='Add Customer']")
+	WebElement addcustomer;
+	@FindBy (xpath = "//input[@placeholder='Enter Customer Name']")
+	WebElement name;
+	@FindBy (xpath = "//input[@placeholder='Enter Mobile Number']")
+	WebElement number;
+	@FindBy (xpath = "//input[@placeholder='Enter Email Id']")
+	WebElement mailid;
+	@FindBy (xpath = "//input[@placeholder='Enter Whatsapp Number']")
+	WebElement watsappnumber;
+	@FindBy (xpath = "//button[normalize-space()='Save']")
+	WebElement savebutton;
+	@FindBy (xpath = "//input[@class='form-control form-control-sm']")   
 	WebElement search;
+	@FindBy (xpath = "//tbody/tr[1]/td[11]/a[1]/button[1]/i[1]")
+	WebElement edit; 
+	@FindBy (xpath = "//tbody/tr[1]/td[11]/a[3]/button[1]/i[1]")
+	WebElement delete;
+	@FindBy (xpath = "//button[text()='Yes']")
+	WebElement alrt;
+	
+	
+	
+	
+	
 	public customerfunctionality() {
-		
-		PageFactory.initElements(driver,this);
-		
-	}
-	public void customerfunctionality1() throws Throwable{
-		Thread.sleep(2000);
-		customer.click();
-		Thread.sleep(2000);
-		name.sendKeys(prop.getProperty("manikumar"));
-		email.sendKeys(prop.getProperty("manikumar.marolix@gmail.com"));
-		whatsapp.sendKeys(prop.getProperty("7989328756"));
-		save.click();
-		search.sendKeys(prop.getProperty("manikumar"));
-		
-		
-		
-		
-		
-		
+		PageFactory.initElements(driver, this);
 	}
 	
-}
+	public void verifycustomer() throws Throwable {
+		
+		Thread.sleep(2000);
+		element.click();
+		customers.click();
+		addcustomer.click();
+		name.sendKeys(prop.getProperty("Customername"));
+		number.sendKeys(prop.getProperty("Mobilenumber"));
+		mailid.sendKeys(prop.getProperty("Emailid"));
+		watsappnumber.sendKeys(prop.getProperty("Wnumber"));
+		savebutton.click();
+		
+		driver.navigate().to("http://empirehome.myprojectsonline.co.in/User/CustomerList");
+		
+		search.sendKeys(prop.getProperty("searchname"));
+		search.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		edit.click();
+		Thread.sleep(2000);
+		name.clear();
+		name.sendKeys(prop.getProperty("editcustname"));
+		Thread.sleep(2000);
+		savebutton.click();
+		
+		driver.navigate().to("http://empirehome.myprojectsonline.co.in/User/CustomerList");
+		
+		search.sendKeys(prop.getProperty("deletename"));
+		search.sendKeys(Keys.ENTER);
+		Thread.sleep(2000);
+		delete.click();
+		
+		 alrt.click();
+		
+		}
+	
+   }
 
 
 

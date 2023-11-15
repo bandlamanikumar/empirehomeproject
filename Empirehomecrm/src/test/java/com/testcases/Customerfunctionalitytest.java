@@ -1,31 +1,66 @@
 package com.testcases;
 
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
+import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Test;
 
+import com.aventstack.extentreports.util.Assert;
 import com.base.Basetest;
+import com.pageobjects.Loginfunctionalitywithmulitipuledata;
+import com.pageobjects.customerfunctionality;
 
 public class Customerfunctionalitytest extends Basetest{
+	Loginfunctionalitywithmulitipuledata lf;
+	customerfunctionality cf;
 	
-	@FindBy(xpath = "//span[normalize-space()='Masters']")
-	WebElement masters;
-	@FindBy(xpath = "//a[normalize-space()='Holidays']")
-	WebElement holidays;
-	@FindBy(xpath = "//a[normalize-space()='Add New']")
-	WebElement add;
-	@FindBy(xpath = "//input[@name='HolidayDate']")
-	WebElement date;
-	@FindBy(xpath = "//input[@id='HolidayName']")
-	WebElement name;
-	@FindBy(xpath = "//input[@id='HolidayDesc']")
-	WebElement desc;
-	@FindBy(xpath = "//button[normalize-space()='Save']")
-	WebElement save;
-	@FindBy(xpath = "//i[@class='fa fa-pencil']")
-	WebElement eddit;
-	@FindBy(xpath = "//button[@class='btn btn-danger btn-sm']")
-	WebElement delite;
+	public Customerfunctionalitytest() {
+		super();
+	}
 	
+	@BeforeMethod
+	public void setup() throws Throwable {
+		
+		initialization();
+		
+		lf = new Loginfunctionalitywithmulitipuledata();
+		lf.verifylogin();
+		
+	    cf = new customerfunctionality();
+	}
+	
+	@Test
+	public void customervalidation() throws Throwable {
+		
+		cf.verifycustomer();
+		String urltest = driver.getCurrentUrl();
+		Assert.assertEquals(urltest, "http://empirehome.myprojectsonline.co.in/User/CustomerList");
+	}
+	
+	@AfterMethod
+	public void teardown() {
+		//driver.close();
 	}
 
-
+}
