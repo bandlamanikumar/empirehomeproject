@@ -30,4 +30,10 @@ public void verifylogin() throws Throwable {
 	   Thread.sleep(2000);
 	   loginbutton.click();
 }
+
+
+public void verifysaleslogin() {
+	// TODO Auto-generated method stub
+	
+}
 }
