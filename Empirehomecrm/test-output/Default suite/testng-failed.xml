@@ -3,12 +3,15 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.compenyfunctionalitytest">
+      <class name="com.testcases.Conditionalfunctionalitytest">
         <methods>
+          <include name="deleteconditionvalidation"/>
+          <include name="addnewconditionvalidation"/>
           <include name="setup"/>
-          <include name="editcompanyvalidation"/>
+          <include name="teardown"/>
+          <include name="editconditionvalidation"/>
         </methods>
-      </class> <!-- com.testcases.compenyfunctionalitytest -->
+      </class> <!-- com.testcases.Conditionalfunctionalitytest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
