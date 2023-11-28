@@ -3,15 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.testcases.Conditionalfunctionalitytest">
+      <class name="com.testcases.addinventrytest">
         <methods>
-          <include name="deleteconditionvalidation"/>
-          <include name="addnewconditionvalidation"/>
+          <include name="loginvalidation"/>
           <include name="setup"/>
           <include name="teardown"/>
-          <include name="editconditionvalidation"/>
         </methods>
-      </class> <!-- com.testcases.Conditionalfunctionalitytest -->
+      </class> <!-- com.testcases.addinventrytest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

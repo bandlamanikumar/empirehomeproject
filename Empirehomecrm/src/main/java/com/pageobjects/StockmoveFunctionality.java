@@ -13,7 +13,6 @@ import org.openqa.selenium.support.PageFactory;
 import com.base.Basetest;
 import com.google.common.base.Throwables;
 import com.utils.Testdata;
-import com.utils.Utils;
 
 import io.netty.handler.codec.http.multipart.HttpPostRequestDecoder.NotEnoughDataDecoderException;
 

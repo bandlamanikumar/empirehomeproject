@@ -3,6 +3,7 @@ package com.testcases;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.SearchContext;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -16,7 +17,7 @@ import com.pageobjects.Loginfunctionalitywithmulitipuledata;
 public class categoriesfunctionalitytest extends Basetest {
 	Loginfunctionalitywithmulitipuledata lf;
 	CategoriesFunctionality ctf;
-	private By driver;
+	//private By driver;
 	
 	public categoriesfunctionalitytest() {
 		super();
@@ -37,7 +38,7 @@ public class categoriesfunctionalitytest extends Basetest {
 	public void addnewcategoryvalidation() throws Throwable {
 		ctf.common();
 		ctf.verifyaddnewcategory();
-		List<WebElement>records = driver.findElement(By.tagName("tr"))
+		List<WebElement>records = driver.findElements(By.tagName("tr"));
 		int recordcount = records.size();
 	    Assert.assertEquals(recordcount, 8);
 		

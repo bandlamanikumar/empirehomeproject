@@ -60,7 +60,7 @@ public class ConditionFunctionality extends Basetest {
 		conditionname.sendKeys(prop.getProperty("ConditionName"));
 		Thread.sleep(2000);
 		savebutton.click();
-		Testdata.dropdowns(length, "100");
+		Testdata.dropdowns(length, 2);
 		
 	}
 	
@@ -91,7 +91,7 @@ public class ConditionFunctionality extends Basetest {
 		Thread.sleep(2000);
 		yes.click();
 		Thread.sleep(2000);
-		Testdata.dropdowns(length, "100");
+		Testdata.dropdowns(length, 2);
 		
 		
 	}

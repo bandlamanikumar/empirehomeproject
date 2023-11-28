@@ -26,7 +26,7 @@ public class Testdata extends Basetest {
 
 	public static String[][] Customerdata(String sheetname) throws Throwable {
 
-		File file = new File("./src/main/java/com/testdata/EmpireHome.xlsx");
+		File file = new File("C:\\Users\\sys\\git\\empirehomeproject\\Empirehomecrm\\src\\main\\java\\com\\testdata\\ADDTOPRODUCT.xlsx");
 		FileInputStream stream = new FileInputStream(file);
 		XSSFWorkbook workbook = new XSSFWorkbook(stream);
 		XSSFSheet sheet = workbook.getSheet(sheetname);
@@ -48,10 +48,10 @@ public class Testdata extends Basetest {
 
 	}
 
-	public static void dropdowns(WebElement value, String text) {
+	public static void dropdowns(WebElement value, int index) {
 		
 		Select sel = new Select(value);
-		sel.selectByVisibleText(text);
+		sel.selectByIndex(index);
 	}
 	
 	public static void actions(WebDriver driver,WebElement value) {

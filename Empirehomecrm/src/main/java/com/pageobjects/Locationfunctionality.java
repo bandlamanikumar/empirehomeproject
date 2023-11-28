@@ -53,7 +53,7 @@ public class Locationfunctionality extends Basetest{
 		Thread.sleep(2000);
 		savebutton.click();
 		
-		Testdata.dropdowns(length, "100");
+		Testdata.dropdowns(length,2);
 		
 	}
 	
@@ -81,7 +81,7 @@ public class Locationfunctionality extends Basetest{
 		delete.click();
 		yes.click();
 		Thread.sleep(2000);
-		Testdata.dropdowns(length, "100");
+		Testdata.dropdowns(length,2);
 		
 	}
 	

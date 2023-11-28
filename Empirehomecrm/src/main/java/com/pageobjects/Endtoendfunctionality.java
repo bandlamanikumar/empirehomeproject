@@ -18,7 +18,6 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.base.Basetest;
-import com.utils.Utils
 import java.time.Duration;
 import java.util.List;
 import java.util.Set;
@@ -112,7 +111,7 @@ public class Endtoendfunctionality extends Basetest {
 	@FindBy(xpath = "//span[normalize-space()='Dispatch']")
 	WebElement dispatch;
 	@FindBy(xpath = "//a[normalize-space()='Ready to Dispatch']")
-	WebElement readytodispatch;\
+	WebElement readytodispatch;
 	@FindBy(xpath = "//input[@class='form-control form-control-sm']")
 	WebElement searchname;
 	@FindBy(xpath = "//a[@class='btn btn-success']")
@@ -293,5 +292,4 @@ public class Endtoendfunctionality extends Basetest {
 
 	}
 
-}
 }

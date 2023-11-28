@@ -60,8 +60,8 @@ public class MoveStockFunctionality extends Basetest{
 		Thread.sleep(2000);
 		
 		
-		Testdata.dropdowns(movefrom, "Warehouse");
-		Testdata.dropdowns(moveto, "Showroom");
+		Testdata.dropdowns(movefrom,2);
+		Testdata.dropdowns(moveto, 1);
 		
 		notes.sendKeys(prop.getProperty("Notes"));
 		
@@ -83,8 +83,8 @@ public class MoveStockFunctionality extends Basetest{
 		driver.navigate().to("http://empirehome.myprojectsonline.co.in/Inventory/MoveStock");
 		Thread.sleep(2000);
 		
-		Testdata.dropdowns(movefrom, "Showroom");
-		Testdata.dropdowns(moveto, "Warehouse");
+		Testdata.dropdowns(movefrom, 3);
+		Testdata.dropdowns(moveto, 2);
 		
         notes.sendKeys(prop.getProperty("Notes1"));
 		

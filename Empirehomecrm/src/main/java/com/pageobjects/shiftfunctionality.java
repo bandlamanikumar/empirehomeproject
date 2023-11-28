@@ -55,7 +55,7 @@ public class shiftfunctionality extends Basetest {
     	Thread.sleep(2000);
     	savebutton.click();
     	
-    	Testdata.dropdowns(length, "200");
+    	Testdata.dropdowns(length, 2);
 	}
 	
 	public void verifyeditshift()throws Throwable{
@@ -84,7 +84,7 @@ public class shiftfunctionality extends Basetest {
     	Thread.sleep(2000);
     	yes.click();
     	Thread.sleep(2000);
-    	Testdata.dropdowns(length, "200");
+    	Testdata.dropdowns(length,2);
     	
     	
     	
@@ -94,4 +94,3 @@ public class shiftfunctionality extends Basetest {
 }
 
 
-}

@@ -1,6 +1,5 @@
 package com.pageobjects;
 
-import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
@@ -15,9 +14,10 @@ import org.openxmlformats.schemas.wordprocessingml.x2006.main.CTHeight;
 
 import com.base.Basetest;
 import com.google.common.base.Throwables;
+import com.utils.Testdata;
 
-import io.reactivex.rxjava3.functions.Action;
-import lombok.SneakyThrows;
+//import io.reactivex.rxjava3.functions.Action;
+//import lombok.SneakyThrows;
 
 public class addinventry extends Basetest{
 	
@@ -64,7 +64,7 @@ public class addinventry extends Basetest{
 	
 	}
 	
-	public void verifyaddinventrypage(String Modelnumber,String itemtitel,String ItemDescription, String height,String width,String breadth,String colourname,String actualprice,String qty) throws InterruptedException, AWTException {
+	public void verifyaddinventrypage(String Modelnumber,String itemtitel,String ItemDescription, String height,String width,String breadth,String colourname,String actualprice,String qty) throws Throwable {
 		Thread.sleep(3000);
 		//Actions ac=new Actions(driver);
 		//ac.moveToElement(dashboar).click().perform();
@@ -89,25 +89,13 @@ public class addinventry extends Basetest{
 		Qty.sendKeys(qty);
 		Actions ac=new Actions(driver);
 		ac.moveToElement(primeryimageupload).click().perform();
+		
 
-		Robot rb = new Robot();
-		rb.delay(3000);
 		
-		StringSelection path = new StringSelection("C:\\Users\\91810\\AppData\\Roaming\\Microsoft\\Windows\\Network Shortcuts\\tv.jpeg");
-		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(path, null);
-		
-		rb.keyPress(KeyEvent.VK_CONTROL);
-		rb.keyPress(KeyEvent.VK_V);
-		
-		rb.keyRelease(KeyEvent.VK_CONTROL);
-		rb.keyRelease(KeyEvent.VK_V);
-		
-		rb.keyPress(KeyEvent.VK_ENTER);
-		rb.keyRelease(KeyEvent.VK_ENTER);
-		Thread.sleep(2000);
+		Testdata.robot("\"C:\\Users\\sys\\Downloads\\stefan-chair-brown-black__0727320_pe735593_s5.avif\"");
 	
 		
-		
+	
 		savebutton.click();
 	
 		

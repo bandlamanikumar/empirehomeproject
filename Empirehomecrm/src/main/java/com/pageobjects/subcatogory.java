@@ -49,7 +49,7 @@ public class subcatogory extends Basetest {
 		Thread.sleep(2000);
 		addnewcategory.click();
 		
-		Testdata.dropdowns(selectcategory, "BedRoom");
+		Testdata.dropdowns(selectcategory, 2);
 		subcategoryname.sendKeys(prop.getProperty("SubCategoryname"));
 		Thread.sleep(2000);
 		savebutton.click();
@@ -65,7 +65,7 @@ public class subcatogory extends Basetest {
 		Thread.sleep(2000);
 		edit.click();
 		Thread.sleep(2000);
-		Testdata.dropdowns(selectcategory, "BedRoom");
+		Testdata.dropdowns(selectcategory, 2);
 		Thread.sleep(2000);
 		subcategoryname.clear();
 		Thread.sleep(2000);
@@ -88,4 +88,3 @@ public class subcatogory extends Basetest {
 
 }
 
-}
